@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Login - Hub Acadêmico</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <div class="login-container">
+
+        <div class="logo">
+            🎓
+        </div>
+
+        <h1>Entrar</h1>
+
+        <p>Entre na sua conta do Hub Acadêmico</p>
+
+        <form id="formLogin">
+
+            <label for="email">E-mail</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Digite seu e-mail"
+                required
+            >
+
+            <label for="senha">Senha</label>
+
+            <input
+                type="password"
+                id="senha"
+                placeholder="Digite sua senha"
+                required
+            >
+
+            <a href="#" class="esqueci">
+                Esqueci minha senha
+            </a>
+
+            <button type="submit">
+                Entrar
+            </button>
+
+            <p id="mensagem"></p>
+
+        </form>
+
+    </div>
+
+    <script src="login.js"></script>
+
 </body>
 </html>
