@@ -1,0 +1,4 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Recuperar senha - Hub Acadêmico</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="login-container"><div class="logo">🎓</div><h1>Recuperar senha</h1><p>Informe seu e-mail para continuar</p><form id="formRecuperar"><label for="emailRecuperar">E-mail</label><input id="emailRecuperar" type="email" required placeholder="Digite seu e-mail"><button type="submit">Enviar instruções</button><p id="mensagemRecuperar"></p></form><a class="link-voltar-login" href="login.html">Voltar ao login</a></div>
+<script>document.getElementById("formRecuperar").addEventListener("submit",function(e){e.preventDefault();document.getElementById("mensagemRecuperar").textContent="Se este e-mail estiver cadastrado, você receberá as instruções. (Demonstração)";});</script></body></html>
