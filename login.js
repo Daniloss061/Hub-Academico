@@ -1,7 +1,7 @@
-
 const formulario = document.getElementById("formLogin");
 
 formulario.addEventListener("submit", function(event) {
+
     event.preventDefault();
 
     const email = document.getElementById("email").value;
@@ -9,13 +9,17 @@ formulario.addEventListener("submit", function(event) {
     const mensagem = document.getElementById("mensagem");
 
     if (email.trim() === "" || senha.trim() === "") {
+
         mensagem.textContent = "Preencha todos os campos.";
+
         return;
     }
 
-    mensagem.textContent = "Login realizado!";
-
+    mensagem.textContent = "Login realizado com sucesso!";
     setTimeout(function() {
+
         window.location.href = "principal.html";
+
     }, 500);
+
 });
