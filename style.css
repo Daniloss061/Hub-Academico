@@ -533,3 +533,93 @@ button {
     }
 
 }
+
+/* ===== Complementos de navegação e páginas internas ===== */
+.botao-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+.container .botao-link { width: 100%; height: 55px; border-radius: 10px; font-size: 16px; font-weight: bold; }
+.container .btn-entrar { border: none; background: white; color: #4d4ddd; margin-bottom: 15px; }
+.container .btn-cadastro { background: transparent; border: 1px solid white; color: white; }
+.link-voltar-login { color: white; margin-top: 20px; text-decoration: none; font-size: 14px; }
+.icone-link { width: 40px; height: 40px; display:flex; align-items:center; justify-content:center; text-decoration:none; }
+.pesquisa { gap: 8px; }
+.pesquisa .botao-pesquisar { width: auto; height: auto; border: 0; background: transparent; font-size: 18px; padding: 2px; }
+.categoria-link { display: block; color: inherit; text-decoration: none; flex-shrink: 0; }
+.categoria-link:focus-visible, .menu a:focus-visible, a:focus-visible, button:focus-visible { outline: 2px solid #5555dd; outline-offset: 3px; }
+.botao-adicionar-link { display:flex; align-items:center; justify-content:center; text-decoration:none; z-index: 5; }
+.pagina-interna { width:100%; min-height:100vh; background:#fff; color:#111; padding-bottom:90px; }
+.pagina-cabecalho { display:flex; align-items:center; gap:14px; padding:18px 20px; border-bottom:1px solid #eee; }
+.pagina-cabecalho h1 { font-size:21px; text-align:left; margin:0; flex:1; }
+.voltar { color:#4d4ddd; text-decoration:none; font-size:15px; font-weight:bold; }
+.conteudo-pagina { padding:20px; }
+.conteudo-pagina h2 { font-size:17px; margin-bottom:12px; }
+.conteudo-pagina p { text-align:left; font-size:14px; color:#555; line-height:1.6; margin:0 0 14px; }
+.cartao-info { border:1px solid #ddd; border-radius:12px; padding:16px; margin-bottom:12px; }
+.cartao-info h3 { font-size:15px; margin:7px 0; }
+.cartao-info p { margin-bottom:0; }
+.etiqueta { display:inline-block; background:#eeeeff; color:#4d4ddd; border-radius:6px; padding:5px 8px; font-size:11px; }
+.botao-primario { display:flex; align-items:center; justify-content:center; width:100%; min-height:48px; padding:12px 16px; border:0; border-radius:10px; background:#5555dd; color:white; text-decoration:none; font-weight:bold; font-size:15px; cursor:pointer; }
+.botao-secundario { display:flex; align-items:center; justify-content:center; width:100%; min-height:46px; border:1px solid #5555dd; border-radius:10px; color:#4d4ddd; text-decoration:none; font-weight:bold; margin-top:10px; }
+.formulario-pagina { display:flex; flex-direction:column; gap:8px; }
+.formulario-pagina label { font-size:13px; font-weight:bold; margin-top:8px; }
+.formulario-pagina input, .formulario-pagina textarea, .formulario-pagina select { width:100%; border:1px solid #ddd; border-radius:9px; padding:12px; font:14px Arial,sans-serif; background:white; }
+.formulario-pagina textarea { min-height:120px; resize:vertical; }
+.mensagem-pagina { color:#28753b; font-size:13px; margin-top:12px; }
+.avatar-grande { width:76px; height:76px; border-radius:50%; background:#5555dd; color:white; display:flex; align-items:center; justify-content:center; font-size:28px; font-weight:bold; margin:0 auto 12px; }
+.perfil-topo { text-align:center; padding:25px 20px; border-bottom:1px solid #eee; }
+.perfil-topo h2 { font-size:19px; margin-bottom:5px; }
+.perfil-topo p { text-align:center; margin:0; }
+.lista-links { display:flex; flex-direction:column; gap:10px; }
+.lista-links a { color:#333; text-decoration:none; border:1px solid #eee; border-radius:10px; padding:14px; }
+.estado-vazio { padding:25px 16px; text-align:center; background:#f8f8ff; border-radius:12px; color:#666; line-height:1.6; font-size:14px; }
+@media (min-width:768px) {
+  .pagina-interna { max-width:500px; margin:auto; }
+}
+
+
+/* ===== Tela de confirmação de publicação (estilos isolados) ===== */
+.tela-confirmacao { background:#f4f4f6; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; min-height:100vh; display:flex; align-items:center; justify-content:center; color:#11121a; }
+.tela-confirmacao .confirmacao-app { width:304px; height:850px; min-height:0; background:#fff; border:1px solid #d6d6d8; border-radius:17px; position:relative; overflow:hidden; box-shadow:0 5px 20px rgba(0,0,0,.05); }
+.tela-confirmacao .status-bar { width:100%; height:39px; padding:0 14px; display:flex; align-items:center; justify-content:space-between; border:0; }
+.tela-confirmacao .horario { font-size:10px; font-weight:500; color:#111; }
+.tela-confirmacao .status-direita { display:flex; align-items:center; gap:5px; color:#111; }
+.tela-confirmacao .sinal { display:flex; align-items:flex-end; gap:1.5px; height:11px; }
+.tela-confirmacao .sinal i { width:2.5px; background:#111; border-radius:2px; display:block; }
+.tela-confirmacao .sinal i:nth-child(1) { height:3px; }
+.tela-confirmacao .sinal i:nth-child(2) { height:5px; }
+.tela-confirmacao .sinal i:nth-child(3) { height:8px; }
+.tela-confirmacao .sinal i:nth-child(4) { height:10px; }
+.tela-confirmacao .wifi { width:15px; height:13px; display:block; }
+.tela-confirmacao .wifi svg { width:100%; height:100%; }
+.tela-confirmacao .bateria { width:19px; height:9px; border:1.5px solid #111; border-radius:2.5px; display:flex; align-items:center; padding:1px; position:relative; }
+.tela-confirmacao .bateria::after { content:""; position:absolute; right:-3px; top:2px; width:2px; height:4px; background:#111; border-radius:0 1px 1px 0; }
+.tela-confirmacao .bateria span { display:block; width:100%; height:100%; background:#111; border-radius:1px; }
+.tela-confirmacao .confirmacao-conteudo { position:relative; width:100%; height:calc(100% - 39px); padding:0; }
+.tela-confirmacao .icone-sucesso { position:absolute; top:158px; left:50%; transform:translateX(-50%); width:128px; height:128px; border-radius:50%; background:#dff5d8; display:flex; align-items:center; justify-content:center; }
+.tela-confirmacao .check { width:72px; height:72px; color:#29ad58; }
+.tela-confirmacao .confirmacao-titulo { position:absolute; top:335px; left:20px; right:20px; width:auto; margin:0; text-align:center; font-size:21px; line-height:27px; font-weight:700; color:#11131e; }
+.tela-confirmacao .descricao { position:absolute; top:404px; left:18px; right:18px; margin:0; text-align:center; font-size:13px; line-height:22px; font-weight:400; color:#24252d; }
+.tela-confirmacao .btn-principal, .tela-confirmacao .btn-secundario { position:absolute; left:20px; right:20px; width:calc(100% - 40px); height:48px; border-radius:9px; font-family:inherit; font-size:14px; font-weight:600; cursor:pointer; transition:.15s; }
+.tela-confirmacao .btn-principal { top:555px; border:none; background:linear-gradient(90deg,#5c56df 0%,#6258d9 100%); color:#fff; }
+.tela-confirmacao .btn-principal:hover { filter:brightness(.96); }
+.tela-confirmacao .btn-secundario { top:619px; border:1px solid #5147b9; background:#fff; color:#5147b9; }
+.tela-confirmacao .btn-secundario:hover { background:#faf9ff; }
+.tela-confirmacao .btn-principal:active, .tela-confirmacao .btn-secundario:active { transform:scale(.99); }
+.tela-confirmacao .decoracao { position:absolute; font-size:22px; font-weight:400; line-height:1; color:#69d67d; }
+.tela-confirmacao .decoracao-1 { top:263px; left:51px; color:#6658d9; font-size:22px; }
+.tela-confirmacao .decoracao-2 { top:221px; right:53px; color:#69d67d; font-size:22px; }
+.tela-confirmacao .decoracao-3 { top:363px; left:48px; color:#69d67d; font-size:20px; }
+.tela-confirmacao .decoracao-4 { top:355px; right:47px; color:#69d67d; font-size:19px; }
+.tela-confirmacao .estrela { position:absolute; font-size:27px; line-height:1; color:#6258d9; }
+.tela-confirmacao .estrela-1 { top:280px; right:43px; }
+.tela-confirmacao .home-indicator { position:absolute; width:100px; height:4px; left:50%; bottom:8px; transform:translateX(-50%); background:#111; border-radius:10px; }
+@media (max-width:600px) {
+  .tela-confirmacao { background:#fff; }
+  .tela-confirmacao .confirmacao-app { width:100vw; height:100vh; min-height:650px; border:none; border-radius:0; box-shadow:none; }
+}

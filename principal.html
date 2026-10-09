@@ -19,23 +19,15 @@
 
             <h1>Hub Acadêmico</h1>
 
-            <button class="notificacao">
-                🔔
-            </button>
+            <a class="notificacao icone-link" href="notificacoes.html" aria-label="Notificações">🔔</a>
 
         </header>
 
         <!-- PESQUISA -->
-        <div class="pesquisa">
-
-            <input
-                type="text"
-                placeholder="Pesquisar publicações..."
-            >
-
-            <span>🔍</span>
-
-        </div>
+        <form class="pesquisa" action="explorar.html" method="get">
+            <input name="busca" type="search" placeholder="Pesquisar publicações..." aria-label="Pesquisar publicações">
+            <button type="submit" class="botao-pesquisar" aria-label="Pesquisar">🔍</button>
+        </form>
 
         <!-- CATEGORIAS -->
         <section class="categorias">
@@ -44,31 +36,31 @@
 
                 <h2>Categorias</h2>
 
-                <a href="#">Ver todas</a>
+                <a href="categorias.html">Ver todas</a>
 
             </div>
 
             <div class="lista-categorias">
 
-                <div class="categoria">
+                <a class="categoria categoria-link" href="materiais.html">
                     <div class="icone-categoria">📚</div>
                     <span>Materiais</span>
-                </div>
+                </a>
 
-                <div class="categoria">
+                <a class="categoria categoria-link" href="estagios.html">
                     <div class="icone-categoria">💼</div>
                     <span>Estágios</span>
-                </div>
+                </a>
 
-                <div class="categoria">
+                <a class="categoria categoria-link" href="grupos.html">
                     <div class="icone-categoria">👥</div>
                     <span>Grupos</span>
-                </div>
+                </a>
 
-                <div class="categoria">
+                <a class="categoria categoria-link" href="eventos.html">
                     <div class="icone-categoria">📅</div>
                     <span>Eventos</span>
-                </div>
+                </a>
 
             </div>
 
@@ -165,30 +157,46 @@
 
         </section>
 
+        <section class="publicacoes" id="publicacoesCriadas" aria-label="Suas publicações"></section>
+        <script>
+        (function() {
+          const area = document.getElementById("publicacoesCriadas");
+          const posts = JSON.parse(localStorage.getItem("hubPublicacoes") || "[]");
+          if (!posts.length) return;
+          area.innerHTML = "<h2>Suas publicações</h2>";
+          posts.forEach(function(post) {
+            const article = document.createElement("article"); article.className = "publicacao";
+            const tag = document.createElement("span"); tag.className = "categoria-post"; tag.textContent = post.categoria;
+            const title = document.createElement("h3"); title.textContent = post.titulo;
+            const text = document.createElement("p"); text.textContent = post.texto;
+            const date = document.createElement("small"); date.textContent = post.data || "Agora";
+            article.append(tag, title, text, date); area.appendChild(article);
+          });
+        })();
+        </script>
+
         <!-- BOTÃO DE NOVA PUBLICAÇÃO -->
-        <button class="botao-adicionar">
-            +
-        </button>
+        <a class="botao-adicionar botao-adicionar-link" href="nova-publicacao.html" aria-label="Criar publicação">+</a>
 
         <!-- MENU INFERIOR -->
         <nav class="menu">
 
-            <a href="#" class="ativo">
+            <a href="principal.html" class="ativo">
                 <span>⌂</span>
                 Início
             </a>
 
-            <a href="#">
+            <a href="explorar.html">
                 <span>🔍</span>
                 Explorar
             </a>
 
-            <a href="#">
+            <a href="salvos.html">
                 <span>🗂️</span>
                 Salvos
             </a>
 
-            <a href="#">
+            <a href="perfil.html">
                 <span>♙</span>
                 Perfil
             </a>

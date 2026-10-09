@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicação realizada - Hub Acadêmico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="tela-confirmacao">
+    <div class="app confirmacao-app">
+        <div class="status-bar">
+            <span class="horario">9:41</span>
+            <div class="status-direita">
+                <span class="sinal"><i></i><i></i><i></i><i></i></span>
+                <span class="wifi">
+                    <svg viewBox="0 0 24 18" aria-hidden="true">
+                        <path d="M2 5.5C7.5 1 16.5 1 22 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M6 10C10 6.8 14 6.8 18 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="12" cy="15" r="1.5" fill="currentColor"/>
+                    </svg>
+                </span>
+                <span class="bateria"><span></span></span>
+            </div>
+        </div>
+        <main class="conteudo confirmacao-conteudo">
+            <span class="decoracao decoracao-1">+</span>
+            <span class="decoracao decoracao-2">+</span>
+            <span class="estrela estrela-1">✧</span>
+            <span class="decoracao decoracao-3">+</span>
+            <span class="decoracao decoracao-4">+</span>
+            <div class="icone-sucesso">
+                <svg class="check" viewBox="0 0 64 64" aria-hidden="true">
+                    <path d="M14 34L27 47L51 19" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h1 class="confirmacao-titulo">Publicação realizada<br>com sucesso!</h1>
+            <p class="descricao">Sua publicação agora está<br>disponível para alunos e<br>professores.</p>
+            <button class="btn-principal" type="button" onclick="verPublicacao()">Ver publicação</button>
+            <button class="btn-secundario" type="button" onclick="voltarInicio()">Voltar para o início</button>
+        </main>
+        <div class="home-indicator"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explorar - Hub Acadêmico</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="pagina-interna">
+<header class="pagina-cabecalho"><a class="voltar" href="principal.html" aria-label="Voltar">‹ Voltar</a><h1>Explorar</h1></header>
+<main class="conteudo-pagina">
+<form class="pesquisa" action="explorar.html" method="get" style="margin:0 0 20px"><input name="busca" id="campoBusca" type="search" placeholder="Pesquisar publicações..." aria-label="Pesquisar publicações"><button class="botao-pesquisar" type="submit" aria-label="Pesquisar">🔍</button></form>
+<div class="cartao-info item-busca"><span class="etiqueta">Materiais de estudo</span><h3>Material de Banco de Dados</h3><p>Estou compartilhando um material que me ajudou a estudar SQL.</p></div>
+<div class="cartao-info item-busca"><span class="etiqueta">Avisos</span><h3>Lista de exercícios de Java</h3><p>Lista complementar para praticar programação orientada a objetos.</p></div>
+<div class="cartao-info item-busca"><span class="etiqueta">Estágios</span><h3>Dicas para procurar estágio</h3><p>Organize seu currículo e acompanhe as oportunidades da sua área.</p></div>
+<p id="resultadoBusca" class="mensagem-pagina" aria-live="polite"></p>
+<script>
+const params=new URLSearchParams(location.search);const termo=(params.get("busca")||"").trim();const campo=document.getElementById("campoBusca");campo.value=termo;
+const itens=[...document.querySelectorAll(".item-busca")];let visiveis=0;
+itens.forEach(item=>{const ok=!termo||item.textContent.toLocaleLowerCase("pt-BR").includes(termo.toLocaleLowerCase("pt-BR"));item.hidden=!ok;if(ok)visiveis++;});
+document.getElementById("resultadoBusca").textContent=termo?(visiveis?visiveis+" resultado(s) encontrado(s).":"Nenhum resultado encontrado para essa busca."):"Veja algumas publicações para começar a explorar.";
+</script></main>
+
+    <nav class="menu">
+      <a href="principal.html" ><span>⌂</span>Início</a>
+      <a href="explorar.html" class='ativo'><span>🔍</span>Explorar</a>
+      <a href="salvos.html" ><span>🗂️</span>Salvos</a>
+      <a href="perfil.html" ><span>♙</span>Perfil</a>
+    </nav>
+</div>
+</body></html>
