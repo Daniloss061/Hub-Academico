@@ -1,0 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Criar conta - Hub Acadêmico</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="login-container"><div class="logo">🎓</div><h1>Criar conta</h1><p>Faça seu cadastro no Hub Acadêmico</p>
+<form id="formCadastro"><label for="nome">Nome</label><input id="nome" required placeholder="Seu nome completo"><label for="emailCadastro">E-mail</label><input id="emailCadastro" type="email" required placeholder="Seu e-mail"><label for="senhaCadastro">Senha</label><input id="senhaCadastro" type="password" minlength="6" required placeholder="Crie uma senha"><button type="submit">Criar conta</button><p id="mensagemCadastro"></p></form><a class="link-voltar-login" href="login.html">Já tenho conta · Entrar</a></div>
+<script>document.getElementById("formCadastro").addEventListener("submit",function(e){e.preventDefault();document.getElementById("mensagemCadastro").textContent="Cadastro demonstrativo concluído! Agora você pode entrar.";setTimeout(function(){location.href="login.html";},900);});</script></body></html>
