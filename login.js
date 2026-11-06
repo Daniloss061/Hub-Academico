@@ -1,5 +1,6 @@
 const formulario = document.getElementById("formLogin");
 
+if (formulario) {
 formulario.addEventListener("submit", function(event) {
 
     event.preventDefault();
@@ -23,3 +24,4 @@ formulario.addEventListener("submit", function(event) {
     }, 500);
 
 });
+}

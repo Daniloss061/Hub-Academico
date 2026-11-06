@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explorar - Hub Acadêmico</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="pagina-interna">
+<header class="pagina-cabecalho"><a class="voltar" href="principal.html" aria-label="Voltar">‹ Voltar</a><h1>Explorar</h1></header>
+<main class="conteudo-pagina">
+<form class="pesquisa" action="explorar.html" method="get" style="margin:0 0 16px"><input name="busca" id="campoBusca" type="search" placeholder="Pesquisar publicações, matérias, autores..." aria-label="Pesquisar publicações"><button class="botao-pesquisar" type="submit" aria-label="Pesquisar">🔍</button></form>
+<div class="chips" id="chipsMaterias" aria-label="Atalhos por matéria"></div>
+<p id="resultadoBusca" class="mensagem-pagina" aria-live="polite"></p>
+<div id="resultados"></div>
+</main>
+    <nav class="menu">
+      <a href="principal.html" ><span>⌂</span>Início</a>
+      <a href="explorar.html" class='ativo'><span>🔍</span>Explorar</a>
+      <a href="salvos.html" ><span>🗂️</span>Salvos</a>
+      <a href="perfil.html" ><span>♙</span>Perfil</a>
+    </nav>
+</div>
+<script src="hub.js"></script>
+<script>
+(function(){
+  var termo=(new URLSearchParams(location.search).get("busca")||"").trim();
+  document.getElementById("campoBusca").value=termo;
+  var norm=function(s){return String(s).toLocaleLowerCase("pt-BR").normalize("NFD").replace(/[̀-ͯ]/g,"");};
+  var t=norm(termo);
+  var posts=Hub.todos().filter(function(p){
+    if(!t) return true;
+    var m=Hub.materia(p.materia);
+    return norm([p.titulo,p.texto,p.categoria,p.autor,m?m.nome:""].join(" ")).indexOf(t)>=0;
+  });
+  var box=document.getElementById("resultados");
+  if(!t) posts=posts.slice(0,8);
+  posts.forEach(function(p){box.appendChild(Hub.cartao(p));});
+  if(t&&!posts.length) box.appendChild(Hub.estadoVazio("🔎","Nada encontrado","Tente outro termo ou navegue pelas matérias."));
+  document.getElementById("resultadoBusca").textContent=termo?(posts.length?posts.length+" resultado(s) encontrado(s).":"Nenhum resultado encontrado para essa busca."):"Veja algumas publicações para começar a explorar.";
+  var chips=document.getElementById("chipsMaterias");
+  Hub.MATERIAS.forEach(function(m){var a=Hub.el("a","chip",m.icone+" "+m.nome);a.href="materiais.html?materia="+m.id;chips.appendChild(a);});
+})();
+</script>
+</body></html>

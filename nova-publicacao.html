@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova publicação - Hub Acadêmico</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="pagina-interna">
+<header class="pagina-cabecalho"><a class="voltar" href="principal.html">‹ Voltar</a><h1 id="tituloPagina">Nova publicação</h1></header>
+<main class="conteudo-pagina">
+<p>Compartilhe um material, aviso ou oportunidade com a comunidade acadêmica.</p>
+<form class="formulario-pagina" id="formPublicacao">
+  <label for="tituloPost">Título</label>
+  <input id="tituloPost" maxlength="100" placeholder="Ex.: Resumo de Banco de Dados">
+
+  <label for="categoriaPost">Categoria</label>
+  <select id="categoriaPost"></select>
+
+  <label for="materiaPost" id="rotuloMateria">Matéria</label>
+  <select id="materiaPost"></select>
+
+  <label for="textoPost">Descrição</label>
+  <textarea id="textoPost" maxlength="1000" placeholder="Escreva sua publicação..."></textarea>
+
+  <button class="botao-primario" type="submit">Publicar</button>
+  <button class="botao-secundario" type="button" id="btnRascunho">Salvar rascunho</button>
+  <p id="msgPost" class="mensagem-pagina" role="status"></p>
+</form>
+</main>
+</div>
+<script src="hub.js"></script>
+<script src="nova.js"></script>
+</body></html>

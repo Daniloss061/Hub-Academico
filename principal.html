@@ -19,23 +19,15 @@
 
             <h1>Hub Acadêmico</h1>
 
-            <button class="notificacao">
-                🔔
-            </button>
+            <a class="notificacao icone-link" href="notificacoes.html" aria-label="Notificações">🔔</a>
 
         </header>
 
         <!-- PESQUISA -->
-        <div class="pesquisa">
-
-            <input
-                type="text"
-                placeholder="Pesquisar publicações..."
-            >
-
-            <span>🔍</span>
-
-        </div>
+        <form class="pesquisa" action="explorar.html" method="get">
+            <input name="busca" type="search" placeholder="Pesquisar publicações..." aria-label="Pesquisar publicações">
+            <button type="submit" class="botao-pesquisar" aria-label="Pesquisar">🔍</button>
+        </form>
 
         <!-- CATEGORIAS -->
         <section class="categorias">
@@ -44,151 +36,78 @@
 
                 <h2>Categorias</h2>
 
-                <a href="#">Ver todas</a>
+                <a href="categorias.html">Ver todas</a>
 
             </div>
 
             <div class="lista-categorias">
 
-                <div class="categoria">
+                <a class="categoria categoria-link" href="materiais.html">
                     <div class="icone-categoria">📚</div>
                     <span>Materiais</span>
-                </div>
+                </a>
 
-                <div class="categoria">
+                <a class="categoria categoria-link" href="estagios.html">
                     <div class="icone-categoria">💼</div>
                     <span>Estágios</span>
-                </div>
+                </a>
 
-                <div class="categoria">
+                <a class="categoria categoria-link" href="grupos.html">
                     <div class="icone-categoria">👥</div>
                     <span>Grupos</span>
-                </div>
+                </a>
 
-                <div class="categoria">
+                <a class="categoria categoria-link" href="eventos.html">
                     <div class="icone-categoria">📅</div>
                     <span>Eventos</span>
-                </div>
+                </a>
 
             </div>
 
         </section>
 
+        <!-- EM ALTA -->
+        <section class="publicacoes destaques-secao" aria-labelledby="tituloAlta">
+            <h2 id="tituloAlta">🔥 Em alta esta semana</h2>
+            <div class="destaques" id="destaques"></div>
+        </section>
+
         <!-- PUBLICAÇÕES -->
-        <section class="publicacoes">
+        <section class="publicacoes" id="feed" aria-label="Publicações">
+            <h2>Publicações</h2>
 
-            <h2>Publicações recentes</h2>
+            <div class="controles-feed">
+                <div class="chips" id="filtroCategorias" role="group" aria-label="Filtrar por categoria"></div>
+                <div class="segmentado" id="ordenacao" role="group" aria-label="Ordenar publicações"></div>
+            </div>
 
-
-            <!-- PUBLICAÇÃO 1 -->
-            <article class="publicacao">
-
-                <div class="usuario">
-
-                    <div class="avatar">
-                        J
-                    </div>
-
-                    <div>
-                        <strong>João · Aluno</strong>
-                        <small>Hoje às 10:30</small>
-                    </div>
-
-                    <span class="mais">•••</span>
-
-                </div>
-
-                <span class="categoria-post">
-                    Materiais de estudo
-                </span>
-
-                <h3>
-                    Material de Banco de Dados
-                </h3>
-
-                <p>
-                    Estou compartilhando um material que me ajudou
-                    a estudar SQL.
-                </p>
-
-
-                <div class="acoes">
-
-                    <span>♡ 12</span>
-                    <span>💬 3</span>
-                    <span>🔖</span>
-
-                </div>
-
-            </article>
-
-            <!-- PUBLICAÇÃO 2 -->
-            <article class="publicacao">
-
-                <div class="usuario">
-
-                    <div class="avatar professor">
-                        PC
-                    </div>
-
-                    <div>
-                        <strong>Prof. Carlos</strong>
-                        <small>Hoje às 09:15</small>
-                    </div>
-
-                    <span class="mais">•••</span>
-
-                </div>
-
-                <span class="categoria-post aviso">
-                    Avisos
-                </span>
-
-                <h3>
-                    Lista de exercícios de Java
-                </h3>
-
-                <p>
-                    Lista complementar para praticar programação
-                    orientada a objetos.
-                </p>
-
-                <div class="acoes">
-
-                    <span>♡ 15</span>
-                    <span>💬 2</span>
-                    <span>🔖</span>
-
-                </div>
-
-            </article>
-
+            <p class="contagem-feed" id="contagemFeed" aria-live="polite"></p>
+            <div id="listaFeed"></div>
+            <nav class="pager" id="pager" aria-label="Paginação"></nav>
         </section>
 
         <!-- BOTÃO DE NOVA PUBLICAÇÃO -->
-        <button class="botao-adicionar">
-            +
-        </button>
+        <a class="botao-adicionar botao-adicionar-link" href="nova-publicacao.html" aria-label="Criar publicação">+</a>
 
         <!-- MENU INFERIOR -->
         <nav class="menu">
 
-            <a href="#" class="ativo">
+            <a href="principal.html" class="ativo">
                 <span>⌂</span>
                 Início
             </a>
 
-            <a href="#">
+            <a href="explorar.html">
                 <span>🔍</span>
                 Explorar
             </a>
 
-            <a href="#">
+            <a href="salvos.html">
                 <span>🗂️</span>
                 Salvos
             </a>
 
-            <a href="#">
+            <a href="perfil.html">
                 <span>♙</span>
                 Perfil
             </a>
@@ -196,5 +115,7 @@
         </nav>
 
     </div>
+    <script src="hub.js"></script>
+    <script src="feed.js"></script>
 </body>
 </html>

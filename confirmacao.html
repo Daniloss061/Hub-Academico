@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publicação realizada - Hub Acadêmico</title><link rel="stylesheet" href="style.css">
+<style>
+  .confirmacao-bloco { text-align:center; padding:34px 20px 10px; }
+  .confirmacao-icone { width:96px; height:96px; margin:0 auto 18px; border-radius:50%; background:#e8f6eb; color:#28753b; display:flex; align-items:center; justify-content:center; }
+  .confirmacao-icone svg { width:52px; height:52px; }
+  .confirmacao-bloco h2 { font-size:20px; margin-bottom:8px; }
+  .confirmacao-bloco p { text-align:center; max-width:320px; margin:0 auto 22px; }
+  .confirmacao-acoes { padding:0 20px; display:flex; flex-direction:column; gap:10px; }
+  .confirmacao-acoes .botao-secundario { margin-top:0; background:#fff; cursor:pointer; font:bold 15px Arial,sans-serif; }
+</style>
+</head>
+<body>
+<div class="pagina-interna">
+<header class="pagina-cabecalho"><a class="voltar" href="principal.html" aria-label="Voltar">‹ Voltar</a><h1>Publicação</h1></header>
+<main class="conteudo-pagina">
+  <div class="confirmacao-bloco">
+    <div class="confirmacao-icone" aria-hidden="true">
+      <svg viewBox="0 0 64 64"><path d="M14 34L27 47L51 19" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h2>Publicação realizada com sucesso!</h2>
+    <p>Sua publicação agora está disponível para alunos e professores.</p>
+  </div>
+  <div class="confirmacao-acoes">
+    <button class="botao-primario" type="button" onclick="verPublicacao()">Ver publicação</button>
+    <button class="botao-secundario" type="button" onclick="voltarInicio()">Voltar para o início</button>
+  </div>
+</main>
+
+    <nav class="menu">
+      <a href="principal.html" ><span>⌂</span>Início</a>
+      <a href="explorar.html" ><span>🔍</span>Explorar</a>
+      <a href="salvos.html" ><span>🗂️</span>Salvos</a>
+      <a href="perfil.html" ><span>♙</span>Perfil</a>
+    </nav>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
